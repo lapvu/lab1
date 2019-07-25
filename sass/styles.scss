@@ -1,0 +1,188 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+$white: #fff;
+$black: rgb(50, 50, 50);
+$red: #fd4f32;
+$gray: rgb(139, 139, 139);
+$font-montserrat: "Montserrat";
+$font-openSans: "OpenSans";
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: $font-openSans, $font-montserrat;
+}
+@mixin box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin input {
+  margin: 0;
+  outline: 0 none;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  border: none;
+  width: 325px;
+  height: 40px;
+}
+@mixin button {
+  cursor: pointer;
+  color: $white;
+  margin: 0;
+  outline: 0 none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 122px;
+  background-color: $red;
+}
+.hero {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  background-position: center;
+  height: 600px;
+  .hero-head {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .subtitle {
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 300;
+      .fi-plane {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+.hero-body {
+  height: auto;
+  .title {
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+  }
+  .search-box {
+    @include box;
+    .search-input {
+      @include input;
+    }
+    .search-button {
+      @include button;
+    }
+  }
+}
+
+.destinations {
+  margin-bottom: 40px;
+  .top_destinations {
+    font-size: 16px;
+    font-family: $font-montserrat;
+    color: $black;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .subtitle_destinations {
+    font-size: 15px;
+    color: $gray;
+  }
+}
+.card-content {
+  .title {
+    font-size: 14px;
+    padding: 5px 0 18px 0;
+    font-family: $font-montserrat;
+    color: $black;
+    text-transform: uppercase;
+    a {
+      color: $black;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .subtitle {
+    font-size: 13px;
+    color: $gray;
+    line-height: 1.462;
+  }
+}
+
+.section_b {
+  .title {
+    font-size: 52px;
+    color: $black;
+    font-family: $font-openSans;
+    font-weight: 100;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .columns {
+    .column {
+      .title {
+        font-size: 16px;
+        font-family: $font-montserrat;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .subtitle {
+        font-size: 15px;
+        font-family: $font-openSans;
+        color: $gray;
+        padding-right: 30px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .subscribe-box {
+    @include box;
+    margin-bottom: 40px;
+    .mail-input {
+      @include input;
+    }
+    .subscribe-button {
+      @include button;
+    }
+  }
+  .text-inbox {
+    font-size: 16px;
+    padding: 30px 0;
+    font-weight: 600;
+    font-family: $font-montserrat;
+    color: $black;
+    text-transform: uppercase;
+  }
+}
+
+.footer {
+  padding: 2rem 1.5rem;
+  .subtitle {
+    font-size: 14px;
+    font-family: $font-openSans;
+    color: $gray;
+  }
+  a {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $black;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
